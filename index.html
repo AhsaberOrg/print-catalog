@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دليل البرامج التنموية لجمعية البر بالأحساء لعام 2027م</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Cairo & Tajawal -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#1b4332',
+                            primary: '#2d6a4f',
+                            medium: '#40916c',
+                            emerald: '#52b788',
+                            gold: '#d4af37',
+                            goldHover: '#c5a028',
+                            lightGold: '#fef9e7',
+                            softBg: '#f0f4f1',
+                            cardBg: '#ffffff'
+                        }
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        tajawal: ['Tajawal', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Cairo', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .header-bg {
+            background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 60%, #081c15 100%);
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #40916c; border-radius: 4px; }
+        @media print {
+            body * { visibility: hidden; }
+            #printableModal, #printableModal * { visibility: visible; }
+            #printableModal { position: absolute; left: 0; top: 0; width: 100%; }
+            .no-print { display: none !important; }
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased min-h-screen flex flex-col">
+
+    <!-- Top Header -->
+    <header class="header-bg text-white relative overflow-hidden border-b-4 border-brand-gold shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-5 text-center md:text-right">
+                    <div class="w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-white p-2.5 shadow-lg flex items-center justify-center border-2 border-brand-gold/50 shrink-0 overflow-hidden">
+                        <img src="logo.png" alt="شعار جمعية البر بالأحساء" class="w-full h-full object-contain">
+                    </div>
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/20 text-brand-gold text-xs font-bold mb-2 border border-brand-gold/30">
+                            <i class="fa-solid fa-award"></i> جمعية البر بالأحساء
+                        </div>
+                        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white font-tajawal leading-tight">
+                            دليل البرامج التنموية لعام 2027م
+                        </h1>
+                        <p class="text-brand-emerald text-sm sm:text-base mt-1 font-medium">
+                            مستفيدون ممكنون، خدمات شاملة، مجتمع متكاتف، موارد مستدامة
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Banner -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-6 border-t border-white/10">
+                <div class="bg-white/15 backdrop-blur-md rounded-xl p-4 text-center border border-white/10">
+                    <div class="text-brand-gold font-extrabold text-2xl sm:text-3xl" id="stat-total-programs">63</div>
+                    <div class="text-xs sm:text-sm text-gray-200 mt-1">إجمالي البرامج والتصاميم</div>
+                </div>
+                <div class="bg-white/15 backdrop-blur-md rounded-xl p-4 text-center border border-white/10">
+                    <div class="text-brand-emerald font-extrabold text-2xl sm:text-3xl">4</div>
+                    <div class="text-xs sm:text-sm text-gray-200 mt-1">المبادرات الاستراتيجية</div>
+                </div>
+                <div class="bg-white/15 backdrop-blur-md rounded-xl p-4 text-center border border-white/10">
+                    <div class="text-yellow-300 font-extrabold text-2xl sm:text-3xl">+15,000</div>
+                    <div class="text-xs sm:text-sm text-gray-200 mt-1">المستهدفين المتوقعين</div>
+                </div>
+                <div class="bg-white/15 backdrop-blur-md rounded-xl p-4 text-center border border-white/10">
+                    <div class="text-white font-extrabold text-2xl sm:text-3xl" id="stat-filtered-count">63</div>
+                    <div class="text-xs sm:text-sm text-gray-200 mt-1">النتائج المعروضة</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full">
+        
+        <!-- أزرار الانتقال لصفحات التحليل والدراسة والتصويت التشاركي -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            <div class="bg-gradient-to-r from-brand-dark to-brand-primary rounded-3xl shadow-xl p-6 text-white text-center relative overflow-hidden border-2 border-brand-gold flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold font-tajawal mb-2 text-brand-gold">تحليل الاحتياجات التنموية للمراكز</h2>
+                    <p class="text-gray-200 text-xs sm:text-sm mb-4">الاطلاع على نتائج الاستبيانات وتوزيع البرامج الـ 10 المقترحة لكل مركز</p>
+                </div>
+                <a href="center-needs.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-gold hover:bg-yellow-500 text-brand-dark font-extrabold text-sm shadow-lg transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>استعراض احتياج المراكز</span>
+                </a>
+            </div>
+
+            <div class="bg-gradient-to-r from-brand-primary to-brand-medium rounded-3xl shadow-xl p-6 text-white text-center relative overflow-hidden border-2 border-brand-gold flex flex-col justify-between">
+                <div>
+                    <h2 class="text-xl sm:text-2xl font-bold font-tajawal mb-2 text-brand-gold">الدراسة الأولية وتصويت المراكز</h2>
+                    <p class="text-gray-200 text-xs sm:text-sm mb-4">مرئيات مديري المراكز، المشرفين والمستفيدين حول استمرارية برامج 2027م</p>
+                </div>
+                <a href="voting-study.html" class="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-brand-gold hover:bg-yellow-500 text-brand-dark font-extrabold text-sm shadow-lg transition transform hover:-translate-y-1">
+                    <i class="fa-solid fa-square-poll-vertical"></i>
+                    <span>استعراض جدول التصويت التشاركي</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <section id="filterSection" class="bg-white rounded-2xl shadow-xl p-5 sm:p-6 mb-8 border border-gray-100">
+            <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch">
+                <div class="relative flex-1">
+                    <i class="fa-solid fa-magnifying-glass absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 text-lg"></i>
+                    <input type="text" id="searchInput" oninput="applyFilters()" placeholder="ابحث باسم البرنامج، الهدف، أو المخرج..." 
+                           class="w-full pl-4 pr-12 py-3.5 rounded-xl border border-gray-200 focus:border-brand-primary outline-none transition text-sm sm:text-base font-medium">
+                </div>
+
+                <div class="w-full lg:w-72">
+                    <select id="initiativeFilter" onchange="applyFilters()" class="w-full py-3.5 px-4 rounded-xl border border-gray-200 bg-white font-semibold text-gray-700 cursor-pointer">
+                        <option value="ALL">جميع المبادرات والمسارات (4)</option>
+                        <option value="مبادرة جودة الحياة">مبادرة جودة الحياة</option>
+                        <option value="مبادرة الابتكار والريادة">مبادرة الابتكار والريادة</option>
+                        <option value="مبادرة النمو والتميز">مبادرة النمو والتميز</option>
+                        <option value="مبادرة بناء القدرات">مبادرة بناء القدرات</option>
+                    </select>
+                </div>
+
+                <div class="w-full lg:w-60">
+                    <select id="targetFilter" onchange="applyFilters()" class="w-full py-3.5 px-4 rounded-xl border border-gray-200 bg-white font-semibold text-gray-700 cursor-pointer">
+                        <option value="ALL">جميع الفئات المستهدفة</option>
+                        <option value="الأسرة">الأسرة</option>
+                        <option value="الأبناء">الأبناء</option>
+                        <option value="عائل الأسرة">عائل الأسرة</option>
+                    </select>
+                </div>
+
+                <button onclick="resetFilters()" class="px-4 py-3.5 rounded-xl bg-gray-100 hover:bg-gray-200 text-gray-700 font-bold transition flex items-center justify-center gap-2 text-sm shrink-0">
+                    <i class="fa-solid fa-rotate-right"></i>
+                    <span>إعادة ضبط</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Programs Grid -->
+        <section>
+            <div class="flex justify-between items-center mb-6">
+                <div>
+                    <h2 class="text-2xl font-bold text-brand-dark font-tajawal flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-brand-gold"></i>
+                        <span>برامج ومشاريع الخطة التنموية</span>
+                    </h2>
+                    <p class="text-gray-500 text-xs sm:text-sm mt-0.5">انقر على أي برنامج لاستعراض المؤشرات القياسية والمخرجات والتفاصيل الكلية</p>
+                </div>
+                <span id="resultsCountBadge" class="text-xs font-bold px-3 py-1.5 rounded-full bg-brand-softBg text-brand-dark">جاري التحميل...</span>
+            </div>
+
+            <div id="programsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+            <div id="noResults" class="hidden text-center py-16 bg-white rounded-2xl shadow-sm border border-gray-100">
+                <h3 class="text-lg font-bold text-gray-700">لم يتم العثور على برامج مطابقة</h3>
+                <button onclick="resetFilters()" class="mt-4 px-5 py-2.5 rounded-xl bg-brand-primary text-white font-semibold text-sm">إعادة عرض كافة البرامج</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Program Detail Modal Window -->
+    <div id="programModal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden border border-brand-gold/30 transform transition-all scale-95 opacity-0 my-auto" id="modalContainer">
+            
+            <div class="header-bg p-6 text-white relative flex justify-between items-start border-b-4 border-brand-gold">
+                <div class="pr-2">
+                    <div class="flex flex-wrap items-center gap-2 mb-2">
+                        <span id="modalCategory" class="px-3 py-1 rounded-full bg-white/20 text-brand-gold text-xs font-bold"></span>
+                        <span id="modalTarget" class="px-3 py-1 rounded-full bg-brand-gold/20 text-white text-xs font-semibold"></span>
+                    </div>
+                    <h3 id="modalTitle" class="text-2xl sm:text-3xl font-extrabold font-tajawal text-white leading-snug"></h3>
+                </div>
+                <button onclick="closeModal()" class="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition text-lg shrink-0 cursor-pointer">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <div id="printableModal" class="p-6 sm:p-8 overflow-y-auto space-y-6 flex-1 bg-gradient-to-b from-white to-brand-softBg/30">
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 bg-emerald-50/60 p-4 rounded-2xl border border-emerald-100">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-primary text-white flex items-center justify-center"><i class="fa-solid fa-users"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold">الفئة المستهدفة</div>
+                            <div id="modalTargetDetail" class="text-sm font-bold text-brand-dark"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-gold text-brand-dark flex items-center justify-center"><i class="fa-solid fa-bullseye"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold">المسار الرئيسي</div>
+                            <div id="modalCategoryDetail" class="text-sm font-bold text-brand-dark"></div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-brand-emerald text-white flex items-center justify-center"><i class="fa-solid fa-calendar-check"></i></div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold">عام التنفيذ</div>
+                            <div class="text-sm font-bold text-brand-dark">2027 م</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2 flex items-center gap-2 border-r-4 border-brand-gold pr-3">
+                        <i class="fa-solid fa-align-right text-brand-primary"></i> <span>الوصف التفصيلي للبرنامج</span>
+                    </h4>
+                    <p id="modalDescription" class="text-gray-700 leading-relaxed text-sm sm:text-base font-medium pr-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100"></p>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold text-brand-dark mb-2 flex items-center gap-2 border-r-4 border-brand-gold pr-3">
+                        <i class="fa-solid fa-circle-info text-brand-primary"></i> <span>مسوغات ومبررات المشروع</span>
+                    </h4>
+                    <div id="modalReasons" class="text-gray-700 leading-relaxed text-sm sm:text-base font-medium pr-4 bg-white p-4 rounded-xl shadow-sm border border-gray-100"></div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <h4 class="text-md font-bold text-brand-dark mb-3 flex items-center gap-2 border-b pb-2">
+                            <i class="fa-solid fa-crosshairs text-brand-gold"></i> <span>الأهداف المركزية</span>
+                        </h4>
+                        <ul id="modalObjectives" class="space-y-2 text-xs sm:text-sm text-gray-700 font-medium"></ul>
+                    </div>
+
+                    <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-100">
+                        <h4 class="text-md font-bold text-brand-dark mb-3 flex items-center gap-2 border-b pb-2">
+                            <i class="fa-solid fa-chart-line text-brand-emerald"></i> <span>المؤشرات القياسية (KPIs)</span>
+                        </h4>
+                        <ul id="modalKPIs" class="space-y-2 text-xs sm:text-sm text-gray-700 font-medium"></ul>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-brand-lightGold to-amber-50/40 p-5 rounded-2xl border border-brand-gold/30">
+                    <h4 class="text-md font-bold text-brand-dark mb-3 flex items-center gap-2">
+                        <i class="fa-solid fa-trophy text-brand-gold"></i> <span>المخرجات المتوقعة والنتائج المستهدفة</span>
+                    </h4>
+                    <div id="modalOutputs" class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs sm:text-sm text-gray-800 font-semibold"></div>
+                </div>
+            </div>
+
+            <div class="p-4 bg-gray-50 border-t border-gray-200 flex flex-wrap items-center justify-between gap-3 no-print">
+                <div class="text-xs text-gray-500 font-semibold">برامج معتمدة ضمن الخطة التنموية 2027م</div>
+                <div class="flex items-center gap-3">
+                    <button onclick="window.print()" class="px-5 py-2.5 rounded-xl bg-brand-primary text-white font-bold transition text-sm flex items-center gap-2 shadow-md">
+                        <i class="fa-solid fa-print"></i> <span>طباعة / حفظ PDF</span>
+                    </button>
+                    <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl bg-gray-200 hover:bg-gray-300 text-gray-700 font-bold text-sm">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- تحميل ملف الـ 63 برنامج -->
+    <script src="projects.js"></script>
+
+    <script>
+        let filteredPrograms = [];
+
+        function renderPrograms(data) {
+            const grid = document.getElementById('programsGrid');
+            const noResults = document.getElementById('noResults');
+            const badge = document.getElementById('resultsCountBadge');
+            
+            grid.innerHTML = '';
+            
+            if (!data || data.length === 0) {
+                noResults.classList.remove('hidden');
+                badge.innerText = '0 برنامج';
+                document.getElementById('stat-filtered-count').innerText = '0';
+                return;
+            }
+
+            noResults.classList.add('hidden');
+            badge.innerText = `عرض ${data.length} من أصل ${programsData.length} برنامج`;
+            document.getElementById('stat-filtered-count').innerText = data.length;
+
+            data.forEach(item => {
+                const card = document.createElement('div');
+                card.className = "bg-white rounded-2xl p-6 shadow-md hover:shadow-2xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group relative overflow-hidden";
+                
+                card.innerHTML = `
+                    <div class="absolute top-0 right-0 left-0 h-1.5 bg-gradient-to-l from-brand-gold via-brand-emerald to-brand-primary"></div>
+                    <div>
+                        <div class="flex items-center justify-between gap-2 mb-3">
+                            <span class="text-xs font-bold px-3 py-1 rounded-full ${item.badgeColor || 'bg-emerald-100 text-emerald-800'} border border-gray-200/50">
+                                ${item.category}
+                            </span>
+                            <span class="text-xs font-semibold text-gray-500 bg-gray-100 px-2.5 py-1 rounded-md">
+                                <i class="fa-solid fa-user-group text-brand-primary text-xs ml-1"></i> ${item.target}
+                            </span>
+                        </div>
+                        
+                        <h3 class="text-xl font-bold text-brand-dark font-tajawal group-hover:text-brand-primary transition mb-2">
+                            ${item.title}
+                        </h3>
+                        
+                        <p class="text-gray-600 text-xs sm:text-sm line-clamp-3 mb-4 leading-relaxed font-medium">
+                            ${item.description}
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-gray-100 flex items-center justify-between mt-2">
+                        <div class="text-xs text-brand-primary font-bold flex items-center gap-1">
+                            <i class="fa-solid fa-circle-check text-brand-gold"></i>
+                            <span>خطة 2027</span>
+                        </div>
+                        <button onclick="openModal(${item.id})" class="px-4 py-2 rounded-xl bg-brand-softBg hover:bg-brand-primary hover:text-white text-brand-dark font-bold text-xs sm:text-sm transition flex items-center gap-1.5 cursor-pointer shadow-sm border border-brand-medium/20">
+                            <span>عرض التفاصيل الكاملة</span>
+                            <i class="fa-solid fa-arrow-left text-xs"></i>
+                        </button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function applyFilters() {
+            const searchVal = document.getElementById('searchInput').value.trim().toLowerCase();
+            const initVal = document.getElementById('initiativeFilter').value;
+            const targetVal = document.getElementById('targetFilter').value;
+
+            filteredPrograms = programsData.filter(p => {
+                const matchesSearch = p.title.toLowerCase().includes(searchVal) || 
+                                      p.description.toLowerCase().includes(searchVal) ||
+                                      p.category.toLowerCase().includes(searchVal) ||
+                                      p.reasons.toLowerCase().includes(searchVal);
+                
+                const matchesInitiative = (initVal === 'ALL') || (p.category === initVal);
+                
+                let matchesTarget = true;
+                if (targetVal !== 'ALL') {
+                    if (targetVal === 'الأسرة') {
+                        matchesTarget = (p.target === 'الأسرة');
+                    } else {
+                        matchesTarget = (p.target.includes(targetVal));
+                    }
+                }
+
+                return matchesSearch && matchesInitiative && matchesTarget;
+            });
+
+            renderPrograms(filteredPrograms);
+        }
+
+        function resetFilters() {
+            document.getElementById('searchInput').value = '';
+            document.getElementById('initiativeFilter').value = 'ALL';
+            document.getElementById('targetFilter').value = 'ALL';
+            applyFilters();
+        }
+
+        function openModal(id) {
+            const program = programsData.find(p => p.id === id);
+            if (!program) return;
+
+            document.getElementById('modalTitle').innerText = program.title;
+            document.getElementById('modalCategory').innerText = program.category;
+            document.getElementById('modalTarget').innerText = `المستهدفون: ${program.target}`;
+            document.getElementById('modalCategoryDetail').innerText = program.category;
+            document.getElementById('modalTargetDetail').innerText = program.target;
+            
+            document.getElementById('modalDescription').innerText = program.description || '-';
+            document.getElementById('modalReasons').innerText = program.reasons || '-';
+
+            const objList = document.getElementById('modalObjectives');
+            objList.innerHTML = '';
+            (program.objectives || []).forEach(obj => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2";
+                li.innerHTML = `<i class="fa-solid fa-check text-brand-emerald mt-1 text-xs"></i> <span>${obj}</span>`;
+                objList.appendChild(li);
+            });
+
+            const kpiList = document.getElementById('modalKPIs');
+            kpiList.innerHTML = '';
+            (program.kpis || []).forEach(kpi => {
+                const li = document.createElement('li');
+                li.className = "flex items-start gap-2";
+                li.innerHTML = `<i class="fa-solid fa-chart-simple text-brand-gold mt-1 text-xs"></i> <span>${kpi}</span>`;
+                kpiList.appendChild(li);
+            });
+
+            const outputsContainer = document.getElementById('modalOutputs');
+            outputsContainer.innerHTML = '';
+            (program.outputs || []).forEach(out => {
+                const div = document.createElement('div');
+                div.className = "bg-white p-3 rounded-xl border border-brand-gold/20 flex items-center gap-2.5 shadow-sm";
+                div.innerHTML = `<i class="fa-solid fa-star text-brand-gold text-sm"></i> <span>${out}</span>`;
+                outputsContainer.appendChild(div);
+            });
+
+            const modal = document.getElementById('programModal');
+            const container = document.getElementById('modalContainer');
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                container.classList.remove('scale-95', 'opacity-0');
+                container.classList.add('scale-100', 'opacity-100');
+            }, 10);
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('programModal');
+            const container = document.getElementById('modalContainer');
+            container.classList.remove('scale-100', 'opacity-100');
+            container.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }, 200);
+        }
+
+        window.onload = function() {
+            if (typeof programsData !== 'undefined') {
+                document.getElementById('stat-total-programs').innerText = programsData.length;
+                renderPrograms(programsData);
+            }
+            document.getElementById('programModal').addEventListener('click', function(e) {
+                if (e.target === this) closeModal();
+            });
+        };
+    </script>
+</body>
+</html>
